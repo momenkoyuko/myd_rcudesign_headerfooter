@@ -1,0 +1,281 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html{
+	font-size: 62.5%;
+}
+body{
+	color: #333;
+	font-size: 1.6rem;
+	font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+	font-feature-settings: "palt";
+	letter-spacing: 0.025em;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+a{
+	color: #333;
+	text-decoration: none;
+	
+}
+img{
+	width: 100%;
+	height: auto;
+}
+.text-center{
+	text-align: center;
+}
+/*-------------------
+ *  utility
+ --------------------*/
+.wrapper{
+	padding: 0 20px;
+}
+/*-------------------
+ *  header
+ --------------------*/
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	width: 100%;
+	padding: 20px 0 16px;
+	background-color: #fff;
+	border-bottom: solid 1px #e2dede;
+}
+/*-------------------
+ *  logo
+ --------------------*/
+.logo{
+	width: 55px;
+}
+.logo-center{
+	margin: 0 auto 55px;
+}
+/*-------------------
+ *  navigation
+ --------------------*/
+.btn-trigger{
+	-webkit-appearance:none;
+	appearance:none;
+	position: fixed;
+	top: 24px;
+	right: 12px;
+	z-index: 110;
+	width: 40px;
+	height: 20px;
+	border: none;
+	background-color: #fff;
+}
+.btn-trigger span{
+	position: absolute;
+	display: block;
+	width: 28px;
+	height: 1px;
+	background-color: #a0a0a0;
+	transition: all 0.5s;
+}
+.btn-trigger span:first-of-type{
+	top: 0;
+}
+.btn-trigger span:nth-of-type(2){
+	top: 10px;
+}
+.btn-trigger span:last-of-type{
+	bottom: 0;
+}
+.btn-trigger.active span:first-of-type{
+	transform: rotate(45deg);
+	top: 10px;
+}
+.btn-trigger.active span:nth-of-type(2){
+	opacity: 0;
+}
+.btn-trigger.active span:last-of-type{
+	transform: rotate(-45deg);
+	bottom: 10px;
+}
+.navigation{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 120%;
+	padding: 120px 0 150px;
+	background-color: rgba(255,255,255,0.97);
+}
+.nav-item{
+	margin-bottom: 55px;
+}
+.nav-item>a{
+	color: #626262;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+}
+.sns{
+	font-size: 2.7rem;
+}
+/*-------------------
+ *  footer
+ --------------------*/
+.footer{
+	padding: 75px 0 115px;
+}
+.footer-nav{
+	margin-bottom: 75px;
+}
+.footer-text{
+	margin-bottom: 75px;
+	color: #626262;
+	line-height: 2.1;
+}
+.copyrights{
+	color: #626262;
+	font-size: 1.1rem;
+}
+.btn-pageTop{
+	display: none;
+}
+.main{
+	display: block;
+	margin-top: 72px;
+	padding: 100px 20px;
+	font-size: 3rem;
+	color: #fff;
+	background-color: #61C5FC;
+}
+
+@media screen and (min-width:641px){
+	a{
+		transition: all 0.2s;
+	}
+	a:hover{
+		opacity: 0.5;
+	}
+	.wrapper{
+		
+		max-width: 1140px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.main{
+	margin-top: 0;
+	padding: 100px 20px;
+	}
+	/*-------------------
+	 *  header
+	 --------------------*/	
+	.header{
+		position: static;
+		height: 62px;
+		padding: 0;
+		border-top: solid 1px #e2dede;
+		border-bottom: solid 1px #e2dede;
+	}
+	.header-inner{
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 20px;
+	}
+	.btn-trigger{
+		display: none;
+	}
+	.navigation{
+		
+		display: flex;
+		position: static;
+		width: auto;
+		height: auto;
+		padding: 0;
+	}
+	.nav-list{
+		display: flex;
+		
+	}
+	.nav-item{
+		margin: 0;
+	}
+	.nav-item__link{
+		margin-left: 28px;
+	}
+	.nav-item__link:first-of-type{
+		margin-left: 0;
+	}
+	.nav-item__sns:last-of-type{
+		margin-left: 24px;
+	}
+	.l-horizon{
+		margin-left: 40px;
+	}
+	.l-horizon .nav-item>a{
+		display: block;
+		height: 60px;
+		line-height: 60px;
+		font-size: 1.4rem;
+	}
+	.l-horizon .nav-item.current>a{
+		box-sizing: border-box;
+		padding: 0 8px;
+		border-bottom: solid 2px #aaa;
+		color: #aaa;
+	}
+	.sns{
+		font-size: 1.8rem;
+	}
+	/*-------------------
+	 *  footer
+	 --------------------*/
+	.footer{
+		position: relative;
+		padding: 80px 0;
+	}
+	.footer-nav{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 64px;
+	}
+	.l-vertical:first-of-type{
+		margin-bottom: 24px;
+	}
+	.footer-nav .nav-list{
+		margin-bottom: 24px;
+	}
+	.footer-text{
+		margin-bottom: 80px;
+	}
+	.btn-pageTop{
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 50px;
+		width: 44px;
+		height: 44px;
+		background-color: #bababa;
+	}
+	.btn-pageTop>.fa{
+		position: relative;
+		top: 0;
+		line-height: 44px;
+		color: #222;
+		width: 100%;
+		height: 100%;
+	}
+	.btn-pageTop:hover>.fa{
+		top: -10%;
+		transition: all 0.5s;
+	}
+	
+
+	
+	
+	
+	
+	
+	
+}
